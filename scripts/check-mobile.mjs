@@ -24,7 +24,14 @@ const browser = await puppeteer.launch({
 });
 
 const page = await browser.newPage();
-await page.goto('http://localhost:5173/My-Portfolio/', { waitUntil: 'networkidle2', timeout: 30000 });
+// Test the LIVE site, with a real phone User-Agent
+await page.setUserAgent(
+  'Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36',
+);
+await page.goto('https://shresthaalisha0508.github.io/My-Portfolio/?diag=1', {
+  waitUntil: 'networkidle2',
+  timeout: 45000,
+});
 
 // Apply device metrics via raw CDP — immune to Windows display scaling
 const cdp = await page.createCDPSession();

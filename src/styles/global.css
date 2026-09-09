@@ -76,8 +76,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    /* Fixed header offset for hash navigation */
-    scroll-padding-top: 5rem;
+    /* Fixed header offset for hash navigation — includes the notched-phone
+       safe-area inset so anchored sections never hide under the header */
+    scroll-padding-top: calc(5rem + env(safe-area-inset-top, 0px));
     /* Stop iOS Safari from inflating text when the device rotates */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;

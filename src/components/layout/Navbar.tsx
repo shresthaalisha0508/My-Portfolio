@@ -64,6 +64,10 @@ export function Navbar() {
     <header
       className={cn(
         'fixed inset-x-0 top-0 z-40 w-full transition-all duration-300 ease-out-quart',
+        // Safe-area padding: with viewport-fit=cover the page extends under
+        // the notch/status bar, so the header must offset its content by the
+        // device's insets or the hamburger lands beneath the system UI.
+        'pt-[env(safe-area-inset-top)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]',
         solid
           ? 'border-b border-charcoal-900/8 bg-cream-50/90 shadow-sm backdrop-blur-md'
           : 'border-b border-transparent bg-transparent',
@@ -147,7 +151,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-charcoal-900/8 bg-cream-50 lg:hidden"
+            className="max-h-[calc(100dvh-4rem-env(safe-area-inset-top))] overflow-y-auto overscroll-contain border-t border-charcoal-900/8 bg-cream-50 lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {navigationItems.map((item) => (

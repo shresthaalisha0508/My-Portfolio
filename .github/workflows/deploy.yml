@@ -3,7 +3,7 @@
 # One-time setup (see README > Deployment):
 #   Repo → Settings → Pages → Source: "GitHub Actions"
 #
-# The site is built with the repo's base path (/Alisha-Portfolio/) which is
+# The site is built with the repo's base path (/My-Portfolio/) which is
 # the default fallback in vite.config.ts, so no extra env vars are needed.
 name: Deploy to GitHub Pages
 

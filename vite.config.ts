@@ -16,7 +16,7 @@ import { configDefaults, defineConfig as defineTestConfig, mergeConfig } from 'v
  * Priority (highest first):
  *   1. --base flag on the CLI (`vite build --base=/foo/`)
  *   2. VITE_BASE_PATH in .env  → lets you change the target repo per build
- *   3. Automatic default:      → '/Alisha-Portfolio/' (this repository)
+ *   3. Automatic default:      → '/My-Portfolio/' (this repository)
  *
  * '/' can be forced for hosts that serve from the domain root (Netlify, VPS)
  * by setting VITE_BASE_PATH=/ in a local .env.local. Local `npm run dev`
@@ -30,7 +30,7 @@ function resolveBasePath(): string {
     if (trimmed === '/') return '/';
     return `/${trimmed.replace(/^\/+|\/+$/g, '')}/`;
   }
-  return '/Alisha-Portfolio/';
+  return '/My-Portfolio/';
 }
 
 const vitestConfig = defineTestConfig({

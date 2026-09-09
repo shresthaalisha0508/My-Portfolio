@@ -109,7 +109,7 @@ Purely client-side: validation runs in `src/lib/validation.ts` (pure, unit-testa
 
 ## Deployment (GitHub Pages)
 
-The site builds with base path `/Alisha-Portfolio/` by default (see `resolveBasePath()` in `vite.config.ts`). To override:
+The site builds with base path `/My-Portfolio/` by default (see `resolveBasePath()` in `vite.config.ts`). To override:
 
 ```bash
 # build for a different repo name
@@ -129,7 +129,7 @@ VITE_BASE_PATH=/ npm run build
    - install, lint, test and build the site,
    - upload `dist/` with `actions/upload-pages-artifact`,
    - publish it with `actions/deploy-pages`.
-4. The live URL appears under **Settings → Pages** and in the workflow summary — for this repo: `https://rishav8088.github.io/Alisha-Portfolio/`.
+4. The live URL appears under **Settings → Pages** and in the workflow summary — for this repo: `https://shresthaalisha0508.github.io/My-Portfolio/`.
 
 `public/.nojekyll` is committed so GitHub Pages serves Vite's assets as-is. `robots.txt` and `sitemap.xml` are included; update the domain in them (and the canonical/OG URLs in `index.html`) if the site moves.
 

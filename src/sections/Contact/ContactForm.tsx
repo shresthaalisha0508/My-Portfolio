@@ -82,7 +82,9 @@ export function ContactForm() {
 
   const fieldClass = (hasError: boolean) =>
     cn(
-      'w-full rounded-xl border bg-white px-4 py-3 text-sm text-charcoal-900 placeholder:text-charcoal-400',
+      // text-base on mobile: iOS Safari zooms the viewport when an input
+      // smaller than 16px receives focus — text-base avoids that jolt.
+      'w-full rounded-xl border bg-white px-4 py-3 text-base sm:text-sm text-charcoal-900 placeholder:text-charcoal-400',
       'transition-colors focus:outline-none focus:ring-2 focus:ring-teal-600 focus:border-teal-600',
       hasError ? 'border-coral-500' : 'border-charcoal-900/12 hover:border-charcoal-900/25',
     );

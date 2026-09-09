@@ -27,7 +27,10 @@ export function Navbar() {
   const scrolled = useScrolled(8);
   const activeId = useActiveSection(sectionIds);
   const [menuOpen, setMenuOpen] = useState(false);
-  const isDesktop = useMediaQuery('(min-width: 768px)');
+  // Must match the CSS breakpoint below: the hamburger shows below `lg`, so
+  // "desktop layout" begins at 1024px, not 768px. Keeping these in sync means
+  // the menu can never be logically "open" while its panel is display:none.
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
 
   // Close the mobile menu as soon as we cross into the desktop layout,
   // so the state can never be "open" while the panel is display:none.
@@ -70,12 +73,12 @@ export function Navbar() {
         {/* Brand */}
         <a
           href="#top"
-          className="flex items-center gap-3 rounded-full pr-2"
+          className="flex min-w-0 items-center gap-3 rounded-full pr-2"
           aria-label={`${profile.name} — back to top`}
         >
           <span
             aria-hidden="true"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-700 font-display text-sm font-bold text-white"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-teal-700 font-display text-sm font-bold text-white"
           >
             {profile.name
               .split(/\s+/)
@@ -83,14 +86,18 @@ export function Navbar() {
               .map((part) => part[0]?.toUpperCase() ?? '')
               .join('')}
           </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display text-sm font-bold text-charcoal-900">{profile.name}</span>
-            <span className="text-xs text-charcoal-500">{profile.title}</span>
+          <span className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate font-display text-sm font-bold text-charcoal-900">
+              {profile.name}
+            </span>
+            <span className="truncate text-xs text-charcoal-500">{profile.title}</span>
           </span>
         </a>
 
-        {/* Desktop navigation */}
-        <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+        {/* Desktop navigation — hidden below lg: six links + CV button need
+            ~850px, which overflows tablets (768–1023px). Tablets get the
+            hamburger, which is the standard pattern at that width. */}
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {navigationItems.map((item) => {
             const isActive = activeId === item.href.replace('#', '');
             return (
@@ -117,7 +124,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-charcoal-800 transition-colors hover:bg-cream-200/70 md:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-charcoal-800 transition-colors hover:bg-cream-200/70 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -137,7 +144,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="border-t border-charcoal-900/8 bg-cream-50 md:hidden"
+            className="border-t border-charcoal-900/8 bg-cream-50 lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {navigationItems.map((item) => (
@@ -155,7 +162,7 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <Button as="a" href={profile.cvUrl} size="lg" className="mt-3">
+              <Button as="a" href={profile.cvUrl} size="lg" className="mt-3 w-full">
                 Download CV
               </Button>
             </Container>

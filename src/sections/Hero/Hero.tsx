@@ -39,7 +39,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-sage-100/70 via-cream-50/40 to-transparent"
       />
 
-      <Container className="grid items-center gap-12 pb-16 pt-28 sm:pt-32 lg:grid-cols-2 lg:gap-16 lg:pb-24 lg:pt-40">
+      <Container className="grid items-center gap-12 pb-16 pt-28 sm:pt-32 lg:grid-cols-2 lg:gap-16 lg:pb-24 lg:pt-36">
         {/* Copy */}
         <motion.div variants={container} initial="hidden" animate="visible">
           <motion.p
@@ -94,12 +94,11 @@ export function Hero() {
           </motion.ul>
         </motion.div>
 
-        {/* Visual */}
-        <motion.div
+        {/* Visual */}        <motion.div
           variants={container}
           initial="hidden"
           animate="visible"
-          className="mx-auto w-full max-w-md lg:max-w-none"
+          className="mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-none"
         >
           <motion.div variants={item}>
             <Portrait />

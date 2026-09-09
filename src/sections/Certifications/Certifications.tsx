@@ -31,8 +31,8 @@ export function Certifications() {
               <span
                 className={
                   credential.kind === 'degree'
-                    ? 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700'
-                    : 'flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-700'
+                    ? 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700'
+                    : 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-700'
                 }
               >
                 <Icon icon={credential.kind === 'degree' ? GraduationCap : Award} />

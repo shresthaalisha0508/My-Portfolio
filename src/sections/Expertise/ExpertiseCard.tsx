@@ -21,7 +21,7 @@ export function ExpertiseCard({ expertise }: ExpertiseCardProps) {
 
   return (
     <Card hover className="flex h-full flex-col p-6">
-      <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
         <Icon icon={icon} />
       </span>
       <h3 className="mt-4 font-display text-base font-bold text-charcoal-900">{title}</h3>

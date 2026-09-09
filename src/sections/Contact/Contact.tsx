@@ -40,7 +40,7 @@ export function Contact() {
             {details.map((detail) => {
               const content = (
                 <>
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
                     <Icon icon={detail.icon} />
                   </span>
                   <span className="flex min-w-0 flex-col">
@@ -80,7 +80,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-2xl border border-charcoal-900/8 bg-cream-50 p-4 transition hover:border-teal-600/30 hover:bg-teal-50/50"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
                   <Icon icon={link.icon} />
                 </span>
                 <span className="flex min-w-0 flex-col">

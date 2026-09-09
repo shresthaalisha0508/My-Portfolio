@@ -13,9 +13,9 @@ export function Footer() {
   return (
     <footer className="border-t border-charcoal-900/8 bg-white">
       <Container className="py-12">
-        <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div className="flex flex-col gap-10 sm:grid sm:grid-cols-2 sm:gap-8 md:flex md:flex-row md:items-start md:justify-between">
           {/* Identity */}
-          <div className="max-w-sm">
+          <div className="min-w-0 sm:col-span-2 md:max-w-sm md:col-span-auto">
             <p className="font-display text-lg font-bold text-charcoal-900">{profile.name}</p>
             <p className="mt-1 text-sm text-charcoal-500">
               {profile.title} — {profile.specialization}
@@ -45,7 +45,7 @@ export function Footer() {
           </nav>
 
           {/* Contact */}
-          <div>
+          <div className="min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal-500">
               Connect
             </p>
@@ -53,7 +53,7 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${profile.email}`}
-                  className="link-underline text-sm text-charcoal-600 hover:text-teal-800"
+                  className="link-underline block max-w-full truncate text-sm text-charcoal-600 hover:text-teal-800"
                 >
                   {profile.email}
                 </a>
@@ -76,7 +76,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-charcoal-900/8 pt-6">
-          <p className="text-xs leading-relaxed text-charcoal-500">
+          <p className="max-w-3xl text-xs leading-relaxed text-charcoal-500">
             © {year} {profile.name}. All rights reserved. This website does not provide medical
             advice. Testimonials shown are illustrative samples.
           </p>

@@ -78,10 +78,16 @@
     scroll-behavior: smooth;
     /* Fixed header offset for hash navigation */
     scroll-padding-top: 5rem;
+    /* Stop iOS Safari from inflating text when the device rotates */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-cream-50 text-charcoal-800 font-sans antialiased overflow-x-clip;
+    /* Remove the grey tap flash on touch devices — interactive elements
+       define their own :active feedback instead */
+    -webkit-tap-highlight-color: transparent;
   }
 
   ::selection {

@@ -171,7 +171,7 @@ export function ContactForm() {
         ) : null}
       </div>
 
-      <Button type="submit" size="lg" className="w-full sm:w-auto">
+      <Button type="submit" size="lg" className="w-full sm:w-auto active:bg-teal-900">
         <Send className="h-4 w-4" aria-hidden="true" />
         Send message
       </Button>

@@ -65,12 +65,20 @@ export function Hero() {
             {profile.positioning}
           </motion.p>
 
-          <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
-            <Button as="a" href="#contact" size="lg">
+          <motion.div variants={item} className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:flex lg:flex-wrap lg:gap-3">
+            {/* Mobile: full-width stacked buttons with larger tap area;
+                sm+: side-by-side; lg+: natural width like the original. */}
+            <Button as="a" href="#contact" size="lg" className="w-full sm:w-auto active:bg-teal-900">
               <Mail className="h-4 w-4" aria-hidden="true" />
               Let's Connect
             </Button>
-            <Button as="a" href="#experience" variant="outline" size="lg">
+            <Button
+              as="a"
+              href="#experience"
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto active:bg-teal-100"
+            >
               View Experience
               <ArrowDown className="h-4 w-4" aria-hidden="true" />
             </Button>

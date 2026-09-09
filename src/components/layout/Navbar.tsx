@@ -144,7 +144,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="border-t border-charcoal-900/8 bg-cream-50 lg:hidden"
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-charcoal-900/8 bg-cream-50 lg:hidden"
           >
             <Container className="flex flex-col gap-1 py-4">
               {navigationItems.map((item) => (

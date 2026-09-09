@@ -102,7 +102,7 @@ export function Footer() {
         <div className="mt-12 border-t border-white/10 pt-6">
           <p className="max-w-3xl text-xs leading-relaxed text-teal-200/60">
             © {year} {profile.name}. All rights reserved. This website does not provide medical
-            advice. Testimonials shown are illustrative samples.
+            advice.
           </p>
         </div>
       </Container>

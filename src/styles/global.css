@@ -183,6 +183,15 @@
       transparent
     );
   }
+
+  /* Subtle wavy section divider — used between alternating background sections */
+  .section-wave-top {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 48'%3E%3Cpath fill='%23fdfcfa' d='M0 48h1440V24C1200 0 960 0 720 24 480 48 240 48 0 24v24z'/%3E%3C/svg%3E");
+    background-size: 100% 48px;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding-top: 48px;
+  }
 }
 
 /* Refined scrollbar — quiet, brand-tinted, only on devices with a real

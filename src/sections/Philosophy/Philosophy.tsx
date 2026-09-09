@@ -23,6 +23,15 @@ export function Philosophy() {
         aria-hidden="true"
         className="glow-sage pointer-events-none absolute -bottom-40 -right-24 h-96 w-96 opacity-40"
       />
+      {/* Subtle cross-hatch pattern for texture */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.5) 10px, rgba(255,255,255,0.5) 11px)',
+        }}
+      />
       <Container className="relative">
         <AnimatedSection>
           <div className="max-w-2xl">
@@ -44,10 +53,10 @@ export function Philosophy() {
         <AnimatedSection animateChildren className="mt-14">
           <ol className="grid gap-x-12 gap-y-10 md:grid-cols-2">
             {philosophyPrinciples.map((principle) => (
-              <li key={principle.number} className="border-t border-white/15 pt-6">
+              <li key={principle.number} className="group border-t border-white/15 pt-6">
                 <span
                   aria-hidden="true"
-                  className="font-display text-sm font-bold tracking-widest text-coral-300"
+                  className="font-display text-sm font-bold tracking-widest text-coral-300 transition-colors group-hover:text-coral-200"
                 >
                   {principle.number}
                 </span>

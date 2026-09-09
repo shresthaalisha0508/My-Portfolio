@@ -3,6 +3,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { About } from '@/sections/About/About';
 import { Certifications } from '@/sections/Certifications/Certifications';
 import { Contact } from '@/sections/Contact/Contact';
+import { CtaBanner } from '@/sections/CtaBanner/CtaBanner';
 import { Experience } from '@/sections/Experience/Experience';
 import { Expertise } from '@/sections/Expertise/Expertise';
 import { Hero } from '@/sections/Hero/Hero';
@@ -41,6 +42,7 @@ export function App() {
         <Philosophy />
         <Testimonials />
         <Journey />
+        <CtaBanner />
         <Contact />
       </main>
 

@@ -18,7 +18,12 @@ import { ContactForm } from './ContactForm';
 export function Contact() {
   const details = [
     { icon: Mail, label: 'Email', value: profile.email, href: `mailto:${profile.email}` },
-    { icon: Phone, label: 'Phone', value: profile.phone, href: `tel:${profile.phone.replace(/\s+/g, '')}` },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: profile.phone,
+      href: `tel:${profile.phone.replace(/\s+/g, '')}`,
+    },
     { icon: MapPin, label: 'Location', value: profile.location, href: undefined },
   ];
 
@@ -29,7 +34,7 @@ export function Contact() {
           <SectionHeading
             eyebrow="Contact"
             title="Let's connect"
-            lede="Whether it's a role, a rotation or a question about critical care nursing — my inbox is open."
+            lede="Whether it's a role, a rotation or a question about hospital nursing — my inbox is open."
             align="center"
           />
         </AnimatedSection>

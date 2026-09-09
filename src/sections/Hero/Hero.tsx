@@ -38,6 +38,15 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-sage-100/70 via-cream-50/40 to-transparent"
       />
+      {/* Subtle dot grid pattern — adds texture without competing with content */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, var(--color-teal-700) 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
       {/* Radial glow behind the portrait — depth without a heavy gradient */}
       <div
         aria-hidden="true"
@@ -75,10 +84,18 @@ export function Hero() {
             {profile.positioning}
           </motion.p>
 
-          <motion.div variants={item} className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:flex lg:flex-wrap lg:gap-3">
+          <motion.div
+            variants={item}
+            className="mt-8 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:flex lg:flex-wrap lg:gap-3"
+          >
             {/* Mobile: full-width stacked buttons with larger tap area;
                 sm+: side-by-side; lg+: natural width like the original. */}
-            <Button as="a" href="#contact" size="lg" className="w-full sm:w-auto active:bg-teal-900">
+            <Button
+              as="a"
+              href="#contact"
+              size="lg"
+              className="w-full sm:w-auto active:bg-teal-900"
+            >
               <Mail className="h-4 w-4" aria-hidden="true" />
               Let's Connect
             </Button>
@@ -111,8 +128,8 @@ export function Hero() {
             ))}
           </motion.ul>
         </motion.div>
-
-        {/* Visual */}        <motion.div
+        {/* Visual */}{' '}
+        <motion.div
           variants={container}
           initial="hidden"
           animate="visible"

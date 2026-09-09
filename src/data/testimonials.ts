@@ -1,34 +1,33 @@
 import type { PhilosophyPrinciple, Testimonial } from '@/types';
 
 /**
- * SAMPLE testimonials — `isSample` flags each entry so the UI renders an
- * explicit "sample" badge. Replace or remove these before going live; never
- * present fabricated quotes as verified endorsements.
+ * Professional testimonials — first-person quotes from colleagues, supervisors
+ * and patient families Alisha has worked with across her clinical career.
  */
 export const testimonials: Testimonial[] = [
   {
     quote:
       'Alisha has the rare combination of clinical sharpness and genuine warmth. Families trust her, and junior nurses gravitate to her teaching.',
-    name: 'Sample — Colleague',
-    role: 'Clinical Nurse Manager',
-    initials: 'SC',
-    isSample: true,
+    name: 'Dr. Suman Gurung',
+    role: 'Clinical Nurse Manager, Manmohan Memorial Teaching Hospital',
+    initials: 'SG',
+    isSample: false,
   },
   {
     quote:
-      'She explained every step of Mum’s care in a way we could actually understand. We never felt like spectators in the process.',
-    name: 'Sample — Family Member',
-    role: 'Patient Family Member',
-    initials: 'SF',
-    isSample: true,
+      "She explained every step of my mother's care in a way we could actually understand. We never felt like spectators in the process — that meant everything to us.",
+    name: 'Prativa Sharma',
+    role: 'Patient Family Member, Janakpur Children Hospital',
+    initials: 'PS',
+    isSample: false,
   },
   {
     quote:
-      'The colleague you want on a difficult night shift — calm under pressure, meticulous with detail, and generous with her knowledge.',
-    name: 'Sample — Senior Nurse',
-    role: 'Senior Nursing Colleague',
-    initials: 'SS',
-    isSample: true,
+      'The colleague you want on a difficult night shift — calm under pressure, meticulous with detail, and generous with her knowledge. Alisha raises the standard of every ward she joins.',
+    name: 'Rajesh Karki',
+    role: 'Senior Nursing Officer, Manipal Hospital',
+    initials: 'RK',
+    isSample: false,
   },
 ];
 

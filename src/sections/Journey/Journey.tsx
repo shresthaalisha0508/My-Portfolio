@@ -18,7 +18,7 @@ export function Journey() {
         <AnimatedSection>
           <SectionHeading
             eyebrow="Journey"
-            title="The road from graduate nurse to senior critical care"
+            title="The road from graduate nurse to registered nurse"
             lede="Milestones that mark the professional journey so far."
           />
         </AnimatedSection>
@@ -45,10 +45,7 @@ export function Journey() {
                 <span className="stat-value font-display text-2xl font-bold text-teal-700">
                   {milestone.year}
                 </span>
-                <span
-                  aria-hidden="true"
-                  className="h-1 w-1 rounded-full bg-coral-400 md:hidden"
-                />
+                <span aria-hidden="true" className="h-1 w-1 rounded-full bg-coral-400 md:hidden" />
               </div>
               <div className="mt-3 md:mt-0 md:border-l-2 md:border-cream-300 md:pb-8 md:pl-6 md:[&:not(:last-child)]:border-solid">
                 <h3 className="font-display text-sm font-bold text-charcoal-900 sm:text-base">

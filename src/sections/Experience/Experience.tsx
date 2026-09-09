@@ -14,17 +14,13 @@ import { experiences } from '@/data';
  */
 export function Experience() {
   return (
-    <section
-      id="experience"
-      aria-labelledby="experience-heading"
-      className="section-pad bg-white"
-    >
+    <section id="experience" aria-labelledby="experience-heading" className="section-pad bg-white">
       <Container>
         <AnimatedSection>
           <SectionHeading
             eyebrow="Experience"
-            title="A decade of bedside practice, one deliberate step at a time"
-            lede="From graduate rotations to senior critical care — the roles that shaped my practice."
+            title="Bedside practice, one deliberate step at a time"
+            lede="From graduate rotations through paediatric and teaching hospitals — the roles that shaped my practice."
           />
         </AnimatedSection>
 

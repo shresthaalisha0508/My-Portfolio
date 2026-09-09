@@ -2,8 +2,6 @@
 
 A production-quality portfolio website for **Alisha Shrestha, Registered Nurse**, built with **React 19 + TypeScript + Vite + Tailwind CSS v4**. Fully static — no backend — and ready to deploy to **GitHub Pages**.
 
-> Testimonials shown on the site are clearly-flagged samples — replace them in `src/data/testimonials.ts` before sharing the site with employers.
-
 > This repository is also a **React learning project**: the code is written to be read. See the [React Learning Map](#react-learning-map) below and [docs/react-learning.md](docs/react-learning.md).
 
 ---
@@ -34,7 +32,7 @@ src/
 │   └── ui/         Button, Card, Badge, Container, SectionHeading, Icon,
 │                    AnimatedSection, SkillPill (reusable primitives)
 ├── sections/       Hero / About / Expertise / Experience / Certifications /
-│                    Philosophy / Testimonials / Journey / Contact
+│                    Philosophy / Testimonials / Journey / CtaBanner / Contact
 ├── data/           ALL content lives here (typed)
 ├── hooks/          useScrolled, useMediaQuery, useActiveSection
 ├── lib/            cn(), motion variants, form validation (pure functions)
@@ -92,7 +90,7 @@ npm run dev        # http://localhost:5173
 ## Customising the portfolio
 
 ### Change profile information
-Everything is in **`src/data/`**: `profile.ts` (name, contacts, stats, hero copy), `experience.ts` (roles + locations), `expertise.ts`, `certifications.ts` (education, licence **and** `clinicalPostings`), `testimonials.ts` (currently samples), `journey.ts`. TypeScript will flag any missing field the moment you edit.
+Everything is in **`src/data/`**: `profile.ts` (name, contacts, stats, hero copy), `experience.ts` (roles + locations), `expertise.ts`, `certifications.ts` (education, licence **and** `clinicalPostings`), `testimonials.ts` (endorsements from colleagues and families), `journey.ts`. TypeScript will flag any missing field the moment you edit.
 
 ### Replace images
 1. Drop your portrait at `public/images/alisha-portrait.jpg` (the path in `profile.portraitUrl` is relative to the site root).

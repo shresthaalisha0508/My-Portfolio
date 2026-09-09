@@ -21,7 +21,7 @@ export function Expertise() {
           <SectionHeading
             eyebrow="Expertise"
             title="Clinical expertise built around people"
-            lede="Specialised skills developed across eight years of critical care and emergency nursing."
+            lede="Specialised skills developed across paediatric, teaching and multi-speciality hospital settings."
           />
         </AnimatedSection>
 

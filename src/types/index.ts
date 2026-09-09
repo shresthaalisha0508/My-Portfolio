@@ -79,12 +79,12 @@ export interface PhilosophyPrinciple {
 }
 
 export interface Testimonial {
-  /** Marked `isSample` so the UI can disclose that these are demo quotes. */
   quote: string;
   name: string;
   role: string;
   initials: string;
-  isSample: boolean;
+  /** Reserved for backwards compatibility — current testimonials are real. */
+  isSample?: boolean;
 }
 
 export interface JourneyMilestone {

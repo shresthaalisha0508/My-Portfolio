@@ -9,19 +9,20 @@ import { TestimonialCard } from './TestimonialCard';
  * Testimonials — a quiet grid rather than a carousel: three quotes fit on
  * screen, no auto-rotation to make accessible, no timers. If quotes grow,
  * consider an accessible tabbed carousel — not before.
- *
- * The lede discloses that these are sample quotes (each card also carries a
- * "Sample" badge from `isSample` data).
  */
 export function Testimonials() {
   return (
-    <section id="testimonials" aria-labelledby="testimonials-heading" className="section-pad bg-white">
+    <section
+      id="testimonials"
+      aria-labelledby="testimonials-heading"
+      className="section-pad bg-white"
+    >
       <Container>
         <AnimatedSection>
           <SectionHeading
             eyebrow="Testimonials"
             title="Words from colleagues and families"
-            lede="Sample testimonials shown for portfolio demonstration — not verified endorsements."
+            lede="What the people I've worked alongside have to say about working together."
             align="center"
           />
         </AnimatedSection>

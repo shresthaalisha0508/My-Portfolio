@@ -1,0 +1,154 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens (Tailwind v4 @theme)
+ * ---------------------------------------------------------------------------
+ * In Tailwind v4 the configuration lives in CSS. Every token below generates
+ * utilities automatically, e.g. `--color-teal-700` → `bg-teal-700`,
+ * `text-teal-700`, `border-teal-700`… Change a value here and the whole site
+ * re-themes itself. (In Tailwind v3 this was tailwind.config.js.)
+ */
+@theme {
+  /* Brand — deep healthcare teal */
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  --color-teal-950: #042f2e;
+
+  /* Secondary — soft sage */
+  --color-sage-50: #f6f7f4;
+  --color-sage-100: #e8ebe3;
+  --color-sage-200: #d3d9cb;
+  --color-sage-300: #b4bda9;
+  --color-sage-400: #97a288;
+  --color-sage-500: #7c8770;
+  --color-sage-600: #626b58;
+  --color-sage-700: #4e5546;
+  --color-sage-800: #40463a;
+  --color-sage-900: #373c32;
+  --color-sage-950: #1c1f19;
+
+  /* Accent — warm coral/rose, used sparingly */
+  --color-coral-50: #fdf4f2;
+  --color-coral-100: #fbe6e2;
+  --color-coral-200: #f7cec7;
+  --color-coral-300: #f0a99d;
+  --color-coral-400: #e58272;
+  --color-coral-500: #d96b59;
+  --color-coral-600: #c55240;
+  --color-coral-700: #a13a2c;
+
+  /* Surfaces — warm off-white background, white cards */
+  --color-cream-50: #fdfcfa;
+  --color-cream-100: #f9f7f3;
+  --color-cream-200: #f1eee7;
+  --color-cream-300: #e7e2d6;
+
+  /* Neutral text */
+  --color-charcoal-400: #9aa0a6;
+  --color-charcoal-500: #6b7280;
+  --color-charcoal-600: #4b5563;
+  --color-charcoal-700: #374151;
+  --color-charcoal-800: #1f2937;
+  --color-charcoal-900: #111827;
+
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Motion */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgb(17 24 39 / 0.04), 0 8px 24px -8px rgb(17 24 39 / 0.08);
+  --shadow-card-hover: 0 2px 4px rgb(17 24 39 / 0.05), 0 16px 40px -12px rgb(17 24 39 / 0.16);
+  --shadow-ring: inset 0 0 0 1px rgb(17 24 39 / 0.06);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Fixed header offset for hash navigation */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-cream-50 text-charcoal-800 font-sans antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-teal-100);
+    color: var(--color-teal-900);
+  }
+
+  /* Accessible focus — visible for keyboard users, not shown for mouse clicks */
+  :focus-visible {
+    outline: 2px solid var(--color-teal-600);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Respect user motion preferences globally */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .motion-safe-only {
+      display: none !important;
+    }
+  }
+}
+
+@layer components {
+  /* Shared section rhythm so every section breathes the same way */
+  .section-pad {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  /* Underline-on-hover link, used in nav/footer */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 1.5px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s var(--ease-soft);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbars on the horizontal journey timeline */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

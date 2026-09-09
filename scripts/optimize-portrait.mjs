@@ -10,7 +10,7 @@
 import { existsSync, statSync, unlinkSync } from 'node:fs';
 import sharp from 'sharp';
 
-const src = 'public/images/alisha-portrait.png';
+const src = 'public/images/alisha-portrait-new.png';
 const dest = 'public/images/alisha-portrait.jpg';
 
 if (!existsSync(src)) {
@@ -20,7 +20,7 @@ if (!existsSync(src)) {
 
 await sharp(src)
   .rotate() // respect EXIF orientation, then strip metadata
-  .resize({ width: 960, withoutEnlargement: true })
+  .resize({ width: 1080, withoutEnlargement: true })
   .jpeg({ quality: 82, mozjpeg: true })
   .toFile(dest);
 

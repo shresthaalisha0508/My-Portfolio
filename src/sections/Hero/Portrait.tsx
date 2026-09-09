@@ -26,7 +26,9 @@ export function Portrait() {
         className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-sage-100 via-cream-100 to-teal-50"
       />
 
-      <div className="overflow-hidden rounded-[2rem] shadow-card ring-1 ring-charcoal-900/8 aspect-[4/5]">
+      {/* Square frame: matches the near-square source photo (1080x997) so
+          nothing important is cropped, and the block stays compact on mobile. */}
+      <div className="overflow-hidden rounded-[2rem] shadow-card ring-1 ring-charcoal-900/8 aspect-square">
         {showFallback ? (
           <div
             role="img"

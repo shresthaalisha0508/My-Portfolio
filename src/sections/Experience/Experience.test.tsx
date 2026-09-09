@@ -8,11 +8,17 @@ describe('Experience section', () => {
   it('renders every role from the data file', () => {
     render(<Experience />);
 
+    // Role titles repeat across entries, so assert per-item presence via
+    // getAllByText and verify the total number of role headings.
     for (const job of experiences) {
-      expect(screen.getByText(job.role)).toBeInTheDocument();
+      expect(screen.getAllByText(job.role).length).toBeGreaterThan(0);
       expect(screen.getByText(job.organization)).toBeInTheDocument();
       expect(screen.getByText(job.period)).toBeInTheDocument();
+      if (job.location) {
+        expect(screen.getByText(job.location)).toBeInTheDocument();
+      }
     }
+    expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(experiences.length);
   });
 
   it('renders responsibilities for each role', () => {

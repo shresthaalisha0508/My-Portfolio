@@ -49,6 +49,9 @@ export function Experience() {
                   <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-teal-700">
                     {job.organization}
                   </p>
+                  {job.location ? (
+                    <p className="mt-0.5 text-xs text-charcoal-500">{job.location}</p>
+                  ) : null}
 
                   <p className="mt-3 max-w-2xl text-sm leading-relaxed text-charcoal-600 sm:text-base">
                     {job.description}

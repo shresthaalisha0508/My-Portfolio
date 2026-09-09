@@ -14,7 +14,7 @@ export function cn(...classes: Array<string | false | null | undefined>): string
 }
 
 /**
- * Extracts initials (max 2) from a name, e.g. "Sarah Williams" → "SW".
+ * Extracts initials (max 2) from a name, e.g. "Alisha Shrestha" → "AS".
  * Used for avatar fallbacks.
  */
 export function initialsFromName(name: string): string {

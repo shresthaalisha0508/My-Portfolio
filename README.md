@@ -1,6 +1,8 @@
-# Sarah Williams — Nurse Portfolio
+# Alisha Shrestha — Registered Nurse Portfolio
 
-A production-quality portfolio website for a (fictional) registered nurse, built with **React 19 + TypeScript + Vite + Tailwind CSS v4**. Fully static — no backend — and ready to deploy to **GitHub Pages**.
+A production-quality portfolio website for **Alisha Shrestha, Registered Nurse**, built with **React 19 + TypeScript + Vite + Tailwind CSS v4**. Fully static — no backend — and ready to deploy to **GitHub Pages**.
+
+> Testimonials shown on the site are clearly-flagged samples — replace them in `src/data/testimonials.ts` before sharing the site with employers.
 
 > This repository is also a **React learning project**: the code is written to be read. See the [React Learning Map](#react-learning-map) below and [docs/react-learning.md](docs/react-learning.md).
 
@@ -40,7 +42,7 @@ src/
 └── styles/         global.css — Tailwind v4 @theme design tokens
 ```
 
-The core rule: **UI never hardcodes content.** Every section imports typed data from `src/data/*` and maps over it. Rename "Sarah Williams" in `src/data/profile.ts` and the whole site — title tag aside — updates.
+The core rule: **UI never hardcodes content.** Every section imports typed data from `src/data/*` and maps over it. Rename "Alisha Shrestha" in `src/data/profile.ts` and the whole site — title tag aside — updates.
 
 ## How React is being used
 
@@ -90,12 +92,12 @@ npm run dev        # http://localhost:5173
 ## Customising the portfolio
 
 ### Change profile information
-Everything is in **`src/data/`**: `profile.ts` (name, contacts, stats, hero copy), `experience.ts`, `expertise.ts`, `certifications.ts`, `testimonials.ts`, `journey.ts`. TypeScript will flag any missing field the moment you edit.
+Everything is in **`src/data/`**: `profile.ts` (name, contacts, stats, hero copy), `experience.ts` (roles + locations), `expertise.ts`, `certifications.ts` (education, licence **and** `clinicalPostings`), `testimonials.ts` (currently samples), `journey.ts`. TypeScript will flag any missing field the moment you edit.
 
 ### Replace images
-1. Drop your portrait at `src/assets/images/sarah-portrait.jpg` **or** `public/images/sarah-portrait.jpg` (the path in `profile.portraitUrl` is relative to the site root).
+1. Drop your portrait at `public/images/alisha-portrait.jpg` (the path in `profile.portraitUrl` is relative to the site root).
 2. Until an image exists, the hero shows a designed monogram fallback (see `src/sections/Hero/Portrait.tsx`) — the site never renders a broken image.
-3. Replace `public/cv/Sarah-Williams-CV.pdf` with your real CV (or change `profile.cvUrl`).
+3. Replace `public/cv/Alisha-Shrestha-CV.pdf` with the real CV (or change `profile.cvUrl`).
 
 ### Change colors
 Edit the token block in `src/styles/global.css`. All utilities (`bg-teal-700`, `text-charcoal-600`…) are generated from those variables.

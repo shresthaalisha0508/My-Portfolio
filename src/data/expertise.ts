@@ -1,8 +1,8 @@
 import {
-  Activity,
   ClipboardCheck,
-  HeartHandshake,
+  Pill,
   ShieldCheck,
+  Siren,
   Stethoscope,
   Users,
 } from 'lucide-react';
@@ -12,39 +12,39 @@ import type { Expertise } from '@/types';
 /** Areas of clinical expertise rendered by the reusable ExpertiseCard. */
 export const expertiseAreas: Expertise[] = [
   {
-    icon: Activity,
-    title: 'Critical Care',
+    icon: Pill,
+    title: 'Medication Administration',
     description:
-      'High-acuity monitoring and intervention in intensive care settings, with a calm, methodical approach to patient deterioration.',
+      'Proficient, safety-focused administration of medications with careful monitoring for effects and interactions.',
   },
   {
     icon: Stethoscope,
-    title: 'Emergency Nursing',
+    title: 'Patient Assessment',
     description:
-      'Rapid triage, assessment and stabilisation in fast-paced emergency departments where every minute matters.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Patient Advocacy',
-    description:
-      'Ensuring patients and families understand their care, their options and their rights at every step.',
+      'Systematic clinical assessment and observation — monitoring vital signs and interpreting lab results to track patient progress.',
   },
   {
     icon: ClipboardCheck,
-    title: 'Clinical Assessment',
+    title: 'Care Plan Implementation',
     description:
-      'Thorough, systematic patient assessment using evidence-based frameworks to catch early warning signs.',
+      'Translating care plans into consistent, well-documented day-to-day nursing practice.',
   },
   {
     icon: ShieldCheck,
-    title: 'Medication Safety',
+    title: 'Infection Control',
     description:
-      ' Vigilant medication management, double-checking protocols and error-prevention practices.',
+      'Strong working knowledge of infection control protocols, keeping patients, families and colleagues safe.',
+  },
+  {
+    icon: Siren,
+    title: 'Emergency Response',
+    description:
+      'Calm and efficient in emergencies — prioritising, escalating and acting when every minute counts.',
   },
   {
     icon: Users,
-    title: 'Care Coordination',
+    title: 'Team Collaboration',
     description:
-      'Working across multidisciplinary teams to keep care plans coherent from admission through discharge.',
+      'Clear communication and interpersonal skills across patients, families and multidisciplinary healthcare teams.',
   },
 ];

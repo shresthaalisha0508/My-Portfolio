@@ -77,7 +77,11 @@ export function Navbar() {
             aria-hidden="true"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-teal-700 font-display text-sm font-bold text-white"
           >
-            SW
+            {profile.name
+              .split(/\s+/)
+              .slice(0, 2)
+              .map((part) => part[0]?.toUpperCase() ?? '')
+              .join('')}
           </span>
           <span className="flex flex-col leading-tight">
             <span className="font-display text-sm font-bold text-charcoal-900">{profile.name}</span>

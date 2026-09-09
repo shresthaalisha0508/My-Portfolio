@@ -58,6 +58,8 @@ export interface Experience {
   role: string;
   organization: string;
   period: string;
+  /** Optional city/country line, e.g. "Bangalore, India". */
+  location?: string;
   description: string;
   responsibilities: string[];
   achievements: string[];

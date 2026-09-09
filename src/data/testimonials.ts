@@ -1,69 +1,70 @@
 import type { PhilosophyPrinciple, Testimonial } from '@/types';
 
 /**
- * FICTIONAL testimonials — `isSample` flags each entry so the UI renders an
- * explicit “sample” badge. Never present fabricated quotes as verified.
+ * SAMPLE testimonials — `isSample` flags each entry so the UI renders an
+ * explicit "sample" badge. Replace or remove these before going live; never
+ * present fabricated quotes as verified endorsements.
  */
 export const testimonials: Testimonial[] = [
   {
     quote:
-      'Sarah has the rare combination of clinical sharpness and genuine warmth. Families trust her, and junior nurses gravitate to her teaching.',
-    name: 'Margaret Chen',
+      'Alisha has the rare combination of clinical sharpness and genuine warmth. Families trust her, and junior nurses gravitate to her teaching.',
+    name: 'Sample — Colleague',
     role: 'Clinical Nurse Manager',
-    initials: 'MC',
+    initials: 'SC',
     isSample: true,
   },
   {
     quote:
       'She explained every step of Mum’s care in a way we could actually understand. We never felt like spectators in the process.',
-    name: 'David Okafor',
+    name: 'Sample — Family Member',
     role: 'Patient Family Member',
-    initials: 'DO',
+    initials: 'SF',
     isSample: true,
   },
   {
     quote:
       'The colleague you want on a difficult night shift — calm under pressure, meticulous with detail, and generous with her knowledge.',
-    name: 'Priya Nair',
+    name: 'Sample — Senior Nurse',
     role: 'Senior Nursing Colleague',
-    initials: 'PN',
+    initials: 'SS',
     isSample: true,
   },
 ];
 
 /**
- * Clinical philosophy — deliberately numbered editorial items so this section
- * reads differently from the card-based sections elsewhere on the page.
+ * Clinical philosophy — numbered editorial items rendered in the dark
+ * Philosophy section.
  */
 export const philosophyPrinciples: PhilosophyPrinciple[] = [
   {
     number: '01',
-    title: 'Compassion',
-    description: 'Care begins with seeing the person, not the chart.',
+    title: 'Patient Safety First',
+    description: 'Safe medication practice and infection control in every single task.',
   },
   {
     number: '02',
-    title: 'Evidence-Based Practice',
-    description: 'Decisions grounded in current research, never habit.',
+    title: 'Thorough Assessment',
+    description: 'Vital signs, labs and observations — watched carefully and acted on early.',
   },
   {
     number: '03',
-    title: 'Patient Advocacy',
-    description: 'Every patient deserves a voice — and a champion.',
+    title: 'Clear Communication',
+    description: 'Plain language with patients and families, precision with the care team.',
   },
   {
     number: '04',
-    title: 'Clear Communication',
-    description: 'Plain language with patients, precision with clinicians.',
+    title: 'Calm in Emergencies',
+    description: 'Urgent situations call for steady prioritisation, not panic.',
   },
   {
     number: '05',
     title: 'Team Collaboration',
-    description: 'The best outcomes are coordinated, not heroic.',
+    description: 'The best outcomes come from multidisciplinary teamwork.',
   },
   {
     number: '06',
     title: 'Continuous Learning',
-    description: 'Medicine moves; so must clinical practice.',
+    description: 'Healthcare moves — from BSc to MBA, the learning never stops.',
   },
 ];

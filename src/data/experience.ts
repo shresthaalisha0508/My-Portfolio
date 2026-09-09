@@ -1,52 +1,56 @@
 import type { Experience } from '@/types';
 
-/** Professional history rendered by the Experience timeline. */
+/**
+ * Professional work experience rendered by the Experience timeline.
+ * Clinical training postings are listed separately in certifications.ts.
+ */
 export const experiences: Experience[] = [
   {
-    role: 'Senior Registered Nurse',
-    organization: 'Royal Melbourne Hospital',
-    period: '2021 — Present',
+    role: 'Registered Nurse',
+    organization: 'Manmohan Memorial Teaching Hospital',
+    period: 'Sep 2022 — Dec 2022',
+    location: 'Swoyambhu-15, Kathmandu, Nepal',
     description:
-      'Part of the intensive care unit’s senior nursing team, precepting junior staff and leading quality initiatives.',
+      'Provided nursing care in a teaching hospital setting, working closely with consultants, junior doctors and nursing staff across the ward.',
     responsibilities: [
-      'Coordinate nursing care for high-acuity ICU patients',
-      'Precept and mentor graduate and junior nurses',
-      'Lead monthly clinical skill workshops for the unit',
+      'Administered medications and monitored patients for responses and side effects',
+      'Conducted patient assessments and updated care plans',
+      'Monitored vital signs and interpreted lab results',
     ],
     achievements: [
-      'Recognised with the unit’s Clinical Excellence Award (2023)',
-      'Co-authored a ventilation weaning care bundle adopted hospital-wide',
+      'Maintained strict infection control standards on the ward',
     ],
   },
   {
     role: 'Registered Nurse',
-    organization: 'St Vincent’s Hospital Melbourne',
-    period: '2018 — 2021',
+    organization: 'Janakpur Children Hospital',
+    period: 'Nov 2021 — Aug 2022',
+    location: 'Janakpur, Nepal',
     description:
-      'Rotated through the emergency department and critical care wards, building a strong foundation in acute patient management.',
+      'Cared for paediatric patients and supported families through treatment, with a strong focus on clear communication and reassurance.',
     responsibilities: [
-      'Triage and manage emergency presentations across all acuity levels',
-      'Administer and monitor complex medication regimens',
-      'Liaise with families and multidisciplinary teams on care plans',
+      'Delivered day-to-day nursing care for children across the ward',
+      'Implemented and documented care plans',
+      'Communicated with families about treatment and progress',
     ],
     achievements: [
-      'Completed postgraduate studies in critical care nursing',
-      'Reduced documentation errors by redesigning the shift handover checklist',
+      'Handled emergency situations calmly and efficiently',
     ],
   },
   {
-    role: 'Graduate Registered Nurse',
-    organization: 'Melbourne Health',
-    period: '2016 — 2018',
+    role: 'Registered Nurse',
+    organization: 'Manipal Hospital, Old Airport Road',
+    period: 'Apr 2021 — Jul 2021',
+    location: 'Bangalore, India',
     description:
-      'Completed a structured graduate nurse program with rotations across medical and surgical wards.',
+      'Worked in a large multi-speciality hospital, building core skills in patient assessment, medication safety and multidisciplinary collaboration.',
     responsibilities: [
-      'Deliver daily patient care across medical and surgical rotations',
-      'Document assessments, observations and care plan updates',
-      'Participate in supervised skill development and simulation training',
+      'Performed medical procedures under hospital protocols',
+      'Collaborated with multidisciplinary teams on patient care',
+      'Ensured a safe environment for patients',
     ],
     achievements: [
-      'Rated “outstanding” in the graduate program’s final clinical review',
+      'Strengthened foundation in acute hospital nursing practice',
     ],
   },
 ];

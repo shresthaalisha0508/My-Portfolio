@@ -1,8 +1,8 @@
 /**
- * Generates a minimal placeholder PDF at public/cv/Sarah-Williams-CV.pdf.
+ * Generates a minimal placeholder PDF at public/cv/Alisha-Shrestha-CV.pdf.
  *
  * Why: the Navbar's "Download CV" link should work on the very first run.
- * Replace this file with your real CV at public/cv/Sarah-Williams-CV.pdf
+ * Replace this file with your real CV at public/cv/Alisha-Shrestha-CV.pdf
  * (or point profile.cvUrl in src/data/profile.ts at your own file) — and
  * then you can delete this script and the `assets:generate` npm script.
  *
@@ -15,7 +15,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const outDir = join(root, 'public', 'cv');
-const outFile = join(outDir, 'Sarah-Williams-CV.pdf');
+const outFile = join(outDir, 'Alisha-Shrestha-CV.pdf');
 
 if (existsSync(outFile)) {
   console.log('CV already exists — skipping placeholder generation.');
@@ -24,10 +24,10 @@ if (existsSync(outFile)) {
 
 // A tiny but valid one-page PDF, hand-assembled (no dependency needed).
 const lines = [
-  'Sarah Williams - Registered Nurse (Portfolio Demo)',
-  'Critical Care & Emergency Nursing - Melbourne, Australia',
-  'This is a placeholder CV for the demo portfolio.',
-  'Replace public/cv/Sarah-Williams-CV.pdf with your real CV.',
+  'Alisha Shrestha - Registered Nurse',
+  'Hospital & Clinical Nursing - Sydney, NSW, Australia',
+  'Contact: shresthaalisha201@gmail.com | +61 451 484 417',
+  'Replace public/cv/Alisha-Shrestha-CV.pdf with the full CV.',
 ];
 
 const textLines = lines
@@ -58,4 +58,4 @@ pdf += `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xre
 
 mkdirSync(outDir, { recursive: true });
 writeFileSync(outFile, pdf, 'binary');
-console.log('Placeholder CV written to public/cv/Sarah-Williams-CV.pdf');
+console.log('Placeholder CV written to public/cv/Alisha-Shrestha-CV.pdf');

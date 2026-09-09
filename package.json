@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Portfolio website for Sarah Williams, Registered Nurse — built with React, TypeScript, Vite and Tailwind CSS.",
+  "description": "Portfolio website for Alisha Shrestha, Registered Nurse — built with React, TypeScript, Vite and Tailwind CSS.",
   "engines": {
     "node": ">=20"
   },

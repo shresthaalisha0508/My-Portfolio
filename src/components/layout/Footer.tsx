@@ -77,9 +77,8 @@ export function Footer() {
 
         <div className="mt-12 border-t border-charcoal-900/8 pt-6">
           <p className="text-xs leading-relaxed text-charcoal-500">
-            © {year} {profile.name}. All rights reserved. This portfolio is a demonstration project
-            and does not provide medical advice. All testimonials and statistics are illustrative
-            sample content.
+            © {year} {profile.name}. All rights reserved. This website does not provide medical
+            advice. Testimonials shown are illustrative samples.
           </p>
         </div>
       </Container>

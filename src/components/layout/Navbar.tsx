@@ -63,17 +63,20 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-40 transition-all duration-300 ease-out-quart',
+        'fixed inset-x-0 top-0 z-40 w-full transition-all duration-300 ease-out-quart',
         solid
           ? 'border-b border-charcoal-900/8 bg-cream-50/90 shadow-sm backdrop-blur-md'
           : 'border-b border-transparent bg-transparent',
       )}
     >
-      <Container className="flex h-16 items-center justify-between sm:h-[4.5rem]">
+      {/* Defensive layout: brand gets flex-1 (always left), toggle gets
+          ml-auto (always right) — the row stays correct even if some
+          future utility conflict removed justify-between. */}
+      <Container className="flex h-16 items-center justify-between gap-4 sm:h-[4.5rem]">
         {/* Brand */}
         <a
           href="#top"
-          className="flex min-w-0 items-center gap-3 rounded-full pr-2"
+          className="flex min-w-0 flex-1 items-center gap-3 rounded-full pr-2"
           aria-label={`${profile.name} — back to top`}
         >
           <span
@@ -124,7 +127,7 @@ export function Navbar() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full text-charcoal-800 transition-colors hover:bg-cream-200/70 lg:hidden"
+          className="ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-charcoal-800 transition-colors hover:bg-cream-200/70 lg:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}

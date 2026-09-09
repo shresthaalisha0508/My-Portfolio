@@ -36,15 +36,21 @@ export function Contact() {
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Details */}
-          <AnimatedSection animateChildren className="space-y-4">
+          {/* min-w-0: as a grid item, this wrapper otherwise has a
+              min-width:auto floor equal to its widest unbreakable content
+              (the letter-spaced labels), which blows past 280px tracks at
+              very narrow widths */}
+          <AnimatedSection animateChildren className="min-w-0 space-y-4">
             {details.map((detail) => {
               const content = (
                 <>
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
                     <Icon icon={detail.icon} />
                   </span>
-                  <span className="flex min-w-0 flex-col">
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-charcoal-500">
+                  {/* flex-1: size the column by available space, never by
+                      content — keeps long emails from stretching the card */}
+                  <span className="flex min-w-0 flex-1 flex-col">
+                    <span className="truncate text-xs font-semibold uppercase tracking-[0.18em] text-charcoal-500">
                       {detail.label}
                     </span>
                     <span className="truncate text-sm font-medium text-charcoal-900">
@@ -83,8 +89,8 @@ export function Contact() {
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
                   <Icon icon={link.icon} />
                 </span>
-                <span className="flex min-w-0 flex-col">
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-charcoal-500">
+                <span className="flex min-w-0 flex-1 flex-col">
+                  <span className="truncate text-xs font-semibold uppercase tracking-[0.18em] text-charcoal-500">
                     Social
                   </span>
                   <span className="truncate text-sm font-medium text-charcoal-900">

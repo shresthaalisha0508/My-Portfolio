@@ -20,7 +20,7 @@ export function ExpertiseCard({ expertise }: ExpertiseCardProps) {
   const { icon, title, description } = expertise;
 
   return (
-    <Card hover className="flex h-full flex-col p-6">
+    <Card hover className="flex h-full min-w-0 flex-col p-6">
       <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
         <Icon icon={icon} />
       </span>

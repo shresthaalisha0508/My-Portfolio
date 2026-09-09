@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/Card';
-import { cn, initialsFromName } from '@/lib/utils';
+import { initialsFromName } from '@/lib/utils';
 import type { Testimonial } from '@/types';
 
 /**
@@ -17,7 +17,7 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
   const initials = testimonial.initials || initialsFromName(testimonial.name);
 
   return (
-    <Card className="flex h-full flex-col p-6">
+    <Card className="flex h-full min-w-0 flex-col p-6">
       <blockquote className="flex-1">
         <p className="text-sm leading-relaxed text-charcoal-700">“{testimonial.quote}”</p>
       </blockquote>
@@ -28,16 +28,13 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
         >
           {initials}
         </span>
-        <span className="flex min-w-0 flex-col">
-          <span className="truncate text-sm font-semibold text-charcoal-900">
-            {testimonial.name}
+        <span className="flex min-w-0 flex-1 flex-col">
+          <span className="flex min-w-0 items-center gap-2">
+            <span className="truncate text-sm font-semibold text-charcoal-900">
+              {testimonial.name}
+            </span>
             {testimonial.isSample ? (
-              <span
-                className={cn(
-                  'ml-2 rounded-full bg-cream-100 px-2 py-0.5 align-middle',
-                  'text-[10px] font-medium uppercase tracking-wide text-charcoal-500 ring-1 ring-inset ring-charcoal-900/10',
-                )}
-              >
+              <span className="shrink-0 rounded-full bg-cream-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-charcoal-500 ring-1 ring-inset ring-charcoal-900/10">
                 Sample
               </span>
             ) : null}

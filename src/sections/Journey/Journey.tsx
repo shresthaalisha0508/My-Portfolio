@@ -29,6 +29,7 @@ export function Journey() {
         <ol
           className="
             no-scrollbar flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2
+            [contain:layout_paint] md:[contain:none]
             sm:px-6 md:mx-auto md:max-w-6xl md:flex-col md:overflow-visible md:px-0 md:pb-0
           "
         >

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rishav8088.github.io/Alisha-Portfolio/sitemap.xml

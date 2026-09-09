@@ -34,10 +34,13 @@ export function SectionHeading({
     <div className={cn('max-w-2xl', centered && 'mx-auto text-center', className)}>
       <p
         className={cn(
-          'text-xs font-semibold uppercase tracking-[0.2em] text-teal-700',
-          centered && 'mx-auto',
+          'flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-700',
+          centered && 'justify-center',
         )}
       >
+        {/* Short rule before the eyebrow — a quiet editorial accent that ties
+            all sections together; hidden from screen readers as decoration */}
+        <span aria-hidden="true" className="h-px w-8 bg-teal-600/50" />
         {eyebrow}
       </p>
       <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-charcoal-900 sm:text-4xl">

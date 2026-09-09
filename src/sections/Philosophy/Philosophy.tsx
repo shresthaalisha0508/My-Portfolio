@@ -12,9 +12,18 @@ export function Philosophy() {
     <section
       id="philosophy"
       aria-labelledby="philosophy-heading"
-      className="section-pad bg-teal-900 text-white"
+      className="section-pad relative overflow-hidden bg-teal-900 text-white"
     >
-      <Container>
+      {/* Soft corner glows give the dark band depth without imagery */}
+      <div
+        aria-hidden="true"
+        className="glow-teal pointer-events-none absolute -left-32 -top-32 h-96 w-96 opacity-60"
+      />
+      <div
+        aria-hidden="true"
+        className="glow-sage pointer-events-none absolute -bottom-40 -right-24 h-96 w-96 opacity-40"
+      />
+      <Container className="relative">
         <AnimatedSection>
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">

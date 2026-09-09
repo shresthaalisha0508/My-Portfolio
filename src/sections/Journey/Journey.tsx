@@ -42,7 +42,7 @@ export function Journey() {
               "
             >
               <div className="flex items-baseline gap-3 md:w-24 md:shrink-0 md:flex-col md:gap-0">
-                <span className="font-display text-2xl font-bold text-teal-700">
+                <span className="stat-value font-display text-2xl font-bold text-teal-700">
                   {milestone.year}
                 </span>
                 <span

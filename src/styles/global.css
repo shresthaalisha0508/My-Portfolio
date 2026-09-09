@@ -59,9 +59,10 @@
   --color-charcoal-800: #1f2937;
   --color-charcoal-900: #111827;
 
-  /* Typography */
-  --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
+  /* Typography — variable faces from @fontsource (self-hosted) */
+  --font-display: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', 'Inter Variable', system-ui,
+    sans-serif;
+  --font-sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
 
   /* Motion */
   --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -127,6 +128,13 @@
     @apply py-16 sm:py-20 lg:py-28;
   }
 
+  /* Large numerals (stats, timeline years) — tabular figures keep columns
+     visually aligned and the tight tracking reads as intentional design */
+  .stat-value {
+    font-feature-settings: 'tnum' 1;
+    letter-spacing: -0.02em;
+  }
+
   /* Underline-on-hover link, used in nav/footer */
   .link-underline {
     position: relative;
@@ -157,5 +165,47 @@
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Soft radial glow used behind the hero portrait and in the dark
+     philosophy section — depth without heavy gradients */
+  .glow-teal {
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--color-teal-400) 22%, transparent),
+      transparent
+    );
+  }
+  .glow-sage {
+    background: radial-gradient(
+      closest-side,
+      color-mix(in oklab, var(--color-sage-300) 18%, transparent),
+      transparent
+    );
+  }
+}
+
+/* Refined scrollbar — quiet, brand-tinted, only on devices with a real
+   pointer (touch devices keep native overlay behaviour) */
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream-100);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in oklab, var(--color-teal-700) 45%, var(--color-cream-300));
+    border-radius: 8px;
+    border: 2px solid var(--color-cream-100);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-teal-700);
+  }
+
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in oklab, var(--color-teal-700) 45%, var(--color-cream-300))
+      var(--color-cream-100);
   }
 }

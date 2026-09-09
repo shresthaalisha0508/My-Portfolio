@@ -27,12 +27,12 @@ export function Certifications() {
 
         <AnimatedSection animateChildren className="mt-12 grid gap-5 sm:grid-cols-2">
           {certifications.map((credential) => (
-            <Card key={credential.title} hover className="flex items-start gap-4 p-6">
+            <Card key={credential.title} hover className="group flex items-start gap-4 p-6">
               <span
                 className={
                   credential.kind === 'degree'
-                    ? 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700'
-                    : 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-700'
+                    ? 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-700 transition duration-300 ease-out-quart group-hover:scale-105 group-hover:bg-teal-100'
+                    : 'flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sage-100 text-sage-700 transition duration-300 ease-out-quart group-hover:scale-105 group-hover:bg-sage-200'
                 }
               >
                 <Icon icon={credential.kind === 'degree' ? GraduationCap : Award} />

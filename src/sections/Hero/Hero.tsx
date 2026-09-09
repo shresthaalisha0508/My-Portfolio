@@ -38,15 +38,25 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-sage-100/70 via-cream-50/40 to-transparent"
       />
+      {/* Radial glow behind the portrait — depth without a heavy gradient */}
+      <div
+        aria-hidden="true"
+        className="glow-sage pointer-events-none absolute right-0 top-24 -z-10 hidden h-[28rem] w-[28rem] -translate-y-6 lg:block"
+      />
 
       <Container className="grid items-center gap-12 pb-16 pt-28 sm:pt-32 lg:grid-cols-2 lg:gap-16 lg:pb-24 lg:pt-36">
         {/* Copy */}
         <motion.div variants={container} initial="hidden" animate="visible">
-          <motion.p
-            variants={item}
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700"
-          >
-            {profile.heroEyebrow}
+          <motion.p variants={item} className="flex items-center">
+            {/* Availability pill — subtle presence dot; pulse only when the OS
+                allows motion, static otherwise (prefers-reduced-motion) */}
+            <span className="inline-flex items-center gap-2 rounded-full bg-teal-50 px-3.5 py-1.5 text-xs font-semibold text-teal-800 ring-1 ring-inset ring-teal-600/25">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-60 motion-safe:animate-ping motion-reduce:hidden" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-teal-500" />
+              </span>
+              {profile.heroEyebrow}
+            </span>
           </motion.p>
 
           <motion.h1

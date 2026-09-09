@@ -1,6 +1,11 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
+// Self-hosted variable fonts (loaded before styles so text never paints in
+// a fallback face) — no external font CDN request, works offline.
+import '@fontsource-variable/inter';
+import '@fontsource-variable/plus-jakarta-sans';
+
 import { App } from '@/app/App';
 
 import '@/styles/global.css';

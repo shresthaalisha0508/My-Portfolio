@@ -70,7 +70,7 @@ export function About() {
                 >
                   <dt className="sr-only">{stat.label}</dt>
                   <dd>
-                    <span className="block font-display text-3xl font-bold text-teal-800">
+                    <span className="stat-value block font-display text-3xl font-bold text-teal-800">
                       {stat.value}
                     </span>
                     <span className="mt-1 block text-sm text-charcoal-500">{stat.label}</span>

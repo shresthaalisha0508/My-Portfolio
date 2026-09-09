@@ -20,8 +20,8 @@ export function ExpertiseCard({ expertise }: ExpertiseCardProps) {
   const { icon, title, description } = expertise;
 
   return (
-    <Card hover className="flex h-full min-w-0 flex-col p-6">
-      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
+    <Card hover className="group flex h-full min-w-0 flex-col p-6">
+      <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-700 transition duration-300 ease-out-quart group-hover:-rotate-3 group-hover:bg-teal-100 group-hover:text-teal-800">
         <Icon icon={icon} />
       </span>
       <h3 className="mt-4 font-display text-base font-bold text-charcoal-900">{title}</h3>
